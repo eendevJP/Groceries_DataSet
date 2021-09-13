@@ -81,13 +81,13 @@ defaultSuporte = apriori(arquivo_clean, min_support=0.04, use_colnames= True)
 #defaultSuporte - #output
 
 defaultSuporteConfidence3 = association_rules(defaultSuporte, metric='confidence', min_threshold = 0.3)
-#defaultSuporteConfidence3
+#defaultSuporteConfidence3 - #outuput
 
 defaultSuporteConfidence5 = association_rules(defaultSuporte, metric='confidence', min_threshold=0.5)
-#defaultSuporteConfidence5
+#defaultSuporteConfidence5 - #outuput
 
 defaultSuporteConfidence7 = association_rules(defaultSuporte, metric='confidence', min_threshold=0.7)
-#defaultSuporteConfidence7
+#defaultSuporteConfidence7 - #outuput
 
 liftCalculo = apriori(arquivo_clean, min_support=0.01, use_colnames= True)
 #liftCalculo - #output

@@ -51,6 +51,7 @@ itensFrequentes = apriori(arquivo_clean, min_support=0.06, use_colnames= True)
 regras = association_rules(itensFrequentes, metric='lift', min_threshold=0.7)
 #regras - #output
 
+#Gráficos 
 plt.scatter(regras['support'],regras['confidence'])
 plt.xlabel('support')
 plt.ylabel('confidence')
@@ -64,6 +65,7 @@ regras2 = association_rules(itensFrequentes2, metric='lift', min_threshold=0.8)
 
 regras2[regras2.lift > 1]
 
+#Gráficos 
 plt.scatter(regras2['support'],regras2['confidence'])
 plt.xlabel('support')
 plt.ylabel('confidence')
@@ -94,7 +96,7 @@ liftCalculoRegra = association_rules(liftCalculo, metric='lift', min_threshold=3
 #liftCalculoRegra - #output
 
 liftMenorQ1 = apriori(arquivo_clean, min_support=0.01, use_colnames= True)
-liftMenorQ1
+#liftMenorQ1 - #output
 
 lifeMenorQ1Calculo = association_rules(liftMenorQ1, metric='lift', min_threshold=0.5)
-lifeMenorQ1Calculo
+#lifeMenorQ1Calculo - #output
